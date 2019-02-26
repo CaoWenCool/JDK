@@ -767,4 +767,6 @@ public class ArrayListDemo {
     }
 }
 6、查看ArrayList的类图
+![images](https://github.com/CaoWenCool/JDK/blob/master/ArrayList/ArrayList%E7%B1%BB%E5%9B%BE.jpg)
+
 
