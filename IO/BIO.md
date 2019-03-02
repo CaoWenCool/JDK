@@ -15,7 +15,7 @@ JAVA 中的BIO、NIO、AIO 理解为java语言对操作系统的各种模型的�
 1、BIO（Blocking I/O）
    1.1 传统的BIO
    BIO 通信（一请求，一回答）模型图如下:
-   
+   ![images](https://github.com/CaoWenCool/JDK/blob/master/IO/image/BIO%E9%80%9A%E4%BF%A1%E6%A8%A1%E5%9E%8B%E5%9B%BE.jpg)
    采用BIO通信模型的服务端，通常由一个独立的Acceptor线程负责监听客户端的连接。我们一般通过在 while(true) 循环中服务端
    会调用accept()方法等待客户端的连接方式监听请求，请求一旦接收到一个连接请求，就可以建立通信套接字在这个通信套接字上
    进行读写操作，此时不能再接收其他客户端连接请求，只能等待同当前连接的客户端的操作执行完成，不过可以通过多线程来支持
@@ -39,7 +39,7 @@ JAVA 中的BIO、NIO、AIO 理解为java语言对操作系统的各种模型的�
    ，设置线程的最大值，防止由于海量并发接入导致线程耗尽。
    
    伪异步IO模型如下：
-   
+   ![images](https://github.com/CaoWenCool/JDK/blob/master/IO/image/%E4%BC%AA%E5%BC%82%E6%AD%A5IO%E6%A8%A1%E5%9E%8B%E5%9B%BE.jpg)
    采用线程池和任务队列可以实现一种叫做伪异步的I/O通信框架，它的模型如上图所示。当有新的客户端接入时，将客户端的Socket封装
    成一个Task（该任务实现java.lang.Runnable接口）投递到后端的线程池中进行处理，JDK的线程池维护一个消息队列和N个活跃线程。
    对消息队列中的任务进行处理。由于线程池可以设置队列的带下和最大线程数，因此他的资源占用是可控的，无论多少个客户端并发访问
