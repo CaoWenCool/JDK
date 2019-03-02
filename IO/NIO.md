@@ -44,14 +44,14 @@ NIO(New I/O)
    提高系统效率选择器是有用的。
    
   如下图：
-  
+   ![images](https://github.com/CaoWenCool/JDK/blob/master/IO/image/NIO%E9%80%89%E6%8B%A9%E5%99%A8.jpg)
   
   2.3、NIO读数据和写数据
   通常来说NIO中的所有IO都是从Channel通道开始的
   (1) 从通道进行数据读取：创建一个缓冲区，然后请求通道读取数据
  （2）从通道进行数据写入：创建一个缓冲区，填充数据，并要求通道写入数据
  数据读取和写入操作图示：
- 
+  ![images](https://github.com/CaoWenCool/JDK/blob/master/IO/image/%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E4%B8%8E%E5%86%99%E5%85%A5%E6%93%8D%E4%BD%9C%E5%9B%BE.jpg)
  2.4 NIO核心组件简单介绍
  NIO包含下面几个核心的组件：
  （1） Channel通道
